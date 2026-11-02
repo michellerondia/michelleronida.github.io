@@ -704,6 +704,119 @@ section#tentang {
 
 }
 ```
+  
+/* PERBAIKAN FINAL TAMPILAN MOBILE */
+@media (max-width: 800px) {
+
+  /* HEADER */
+  header .wrap.nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 14px !important;
+    padding: 16px 20px !important;
+  }
+
+  .nav .brand {
+    font-size: 25px !important;
+    line-height: 1.2 !important;
+    width: 100%;
+  }
+
+  .nav .brand small {
+    display: block;
+    font-size: 10px !important;
+    letter-spacing: 1.5px !important;
+    margin-top: 5px;
+  }
+
+  .nav nav {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    gap: 22px !important;
+    padding: 5px 0 10px !important;
+    scrollbar-width: none;
+  }
+
+  .nav nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav nav a {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    font-size: 15px !important;
+  }
+
+  .nav > .btn {
+    display: none !important;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    padding: 32px 20px 20px !important;
+  }
+
+  .hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 10vw, 58px) !important;
+    line-height: 1.05 !important;
+    margin: 18px 0 22px !important;
+  }
+
+  .hero .eyebrow {
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+  }
+
+  .hero .lead {
+    font-size: 19px !important;
+    line-height: 1.6 !important;
+    margin-top: 18px !important;
+  }
+
+  .hero .actions {
+    gap: 12px !important;
+    margin-top: 24px !important;
+  }
+
+  .hero .actions .btn {
+    padding: 15px 18px !important;
+    font-size: 15px !important;
+  }
+
+  /* FOTO MICHELLE */
+  .hero-art {
+    min-height: 0 !important;
+    height: auto !important;
+    margin-top: 8px !important;
+    padding: 0 !important;
+  }
+
+  .hero-art img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 380px !important;
+    object-fit: contain !important;
+    object-position: center bottom !important;
+  }
+
+  /* JARAK KE BAGIAN PROFIL */
+  section#tentang {
+    padding-top: 25px !important;
+  }
+}
+
 </style>
 </head>
 <body>
