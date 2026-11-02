@@ -565,6 +565,83 @@ section#tentang {
 
 }
 ```
+  ```css
+@media screen and (max-width: 800px) {
+
+  /* Header lebih ringkas */
+  .wrap.nav {
+    gap: 6px !important;
+    padding: 12px 20px !important;
+  }
+
+  .wrap.nav .brand {
+    font-size: 22px !important;
+  }
+
+  .wrap.nav nav {
+    padding: 5px 0 !important;
+    gap: 22px !important;
+  }
+
+  /* Hero lebih compact */
+  .hero {
+    padding: 25px 20px 0 !important;
+  }
+
+  .hero-grid {
+    gap: 10px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 9vw, 50px) !important;
+    line-height: 1.08 !important;
+    margin-bottom: 18px !important;
+  }
+
+  .hero .eyebrow {
+    font-size: 12px !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .hero .lead {
+    font-size: 17px !important;
+    line-height: 1.6 !important;
+    margin-top: 0 !important;
+  }
+
+  .hero .actions {
+    margin-top: 22px !important;
+    gap: 10px !important;
+  }
+
+  .hero .actions a {
+    padding: 14px 16px !important;
+    font-size: 14px !important;
+  }
+
+  /* Foto langsung terlihat setelah tombol */
+  .hero-art {
+    min-height: 0 !important;
+    height: auto !important;
+    margin-top: 10px !important;
+  }
+
+  .hero-art img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 350px !important;
+    object-fit: contain !important;
+    object-position: center bottom !important;
+  }
+
+  /* Section berikutnya tidak terlalu jauh */
+  section#tentang {
+    padding-top: 20px !important;
+  }
+
+}
+```
 </style>
 </head>
 <body>
