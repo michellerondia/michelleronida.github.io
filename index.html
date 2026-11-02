@@ -225,7 +225,9 @@ footer { padding: 30px 0; border-top: 1px solid #e6e0d4; font-size: 12px; color:
 }
 
 .hero-art {
-  min-height: 450px !important;
+    min-height: 0 !important;
+    height: auto !important;
+}
 }
 
 section#tentang {
@@ -234,17 +236,27 @@ section#tentang {
 
 /* Tampilan HP */
 @media (max-width: 800px) {
+  .hero-grid {
+    gap: 0 !important;
+}
+
+section#tentang {
+    padding-top: 20px !important;
+}
   .hero {
     padding: 25px 0 10px !important;
   }
 
   .hero-art {
-    min-height: 350px !important;
+    min-height: 0 !important;
+    height: auto !important;
+}
   }
 
-  .hero-art img {
-    height: 400px !important;
-    max-height: 400px !important;
+ .hero-art img {
+    height: 320px !important;
+    max-height: 320px !important;
+}
   }
 
   section#tentang {
