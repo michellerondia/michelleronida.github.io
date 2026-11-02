@@ -482,12 +482,69 @@ section#tentang {
   }
 
 }
-  @media (max-width: 800px) {
+ ```css
+/* FIX TOTAL HEADER MOBILE */
+@media screen and (max-width: 800px) {
 
-  .hero {
-    padding: 25px 20px 10px !important;
+  header {
+    position: relative !important;
+    top: auto !important;
+    height: auto !important;
+    z-index: 10 !important;
   }
 
+  .wrap.nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    padding: 15px 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .wrap.nav > .brand {
+    display: block !important;
+    width: 100% !important;
+    font-size: 23px !important;
+    line-height: 1.25 !important;
+  }
+
+  .wrap.nav nav {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 18px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    padding: 8px 0 !important;
+  }
+
+  .wrap.nav nav a {
+    display: inline-block !important;
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    font-size: 14px !important;
+  }
+
+  .wrap.nav .btn {
+    display: none !important;
+  }
+
+  /* Jarak hero dari header */
+  .hero {
+    padding: 25px 20px 10px !important;
+    margin-top: 0 !important;
+  }
+
+  .hero-grid {
+    gap: 15px !important;
+  }
+
+  /* Foto lebih ringkas */
   .hero-art {
     min-height: 0 !important;
     height: auto !important;
@@ -496,17 +553,18 @@ section#tentang {
 
   .hero-art img {
     height: auto !important;
-    max-height: 420px !important;
+    max-height: 400px !important;
     width: 100% !important;
     object-fit: contain !important;
-    object-position: center bottom !important;
   }
 
+  /* Kurangi jarak ke section berikutnya */
   section#tentang {
     padding-top: 25px !important;
   }
 
 }
+```
 </style>
 </head>
 <body>
