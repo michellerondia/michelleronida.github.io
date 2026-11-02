@@ -642,6 +642,68 @@ section#tentang {
 
 }
 ```
+  ```css
+@media screen and (max-width: 800px) {
+
+  /* Hilangkan garis scrollbar menu */
+  .wrap.nav nav {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+
+  .wrap.nav nav::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* Hero lebih ringkas */
+  .hero {
+    padding: 22px 20px 0 !important;
+  }
+
+  .hero h1 {
+    font-size: 42px !important;
+    line-height: 1.08 !important;
+    margin: 0 0 18px !important;
+  }
+
+  .hero .eyebrow {
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 18px !important;
+  }
+
+  .hero .lead {
+    font-size: 16px !important;
+    line-height: 1.55 !important;
+  }
+
+  .hero .actions {
+    margin-top: 18px !important;
+  }
+
+  .hero .actions a {
+    padding: 12px 14px !important;
+    font-size: 13px !important;
+  }
+
+  /* Foto lebih dekat dengan tombol */
+  .hero-art {
+    min-height: 0 !important;
+    height: auto !important;
+    margin-top: 0 !important;
+  }
+
+  .hero-art img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 320px !important;
+    object-fit: contain !important;
+    object-position: center bottom !important;
+  }
+
+}
+```
 </style>
 </head>
 <body>
