@@ -1,40 +1,468 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Private Emotional Healing bersama Michelle Ronida.">
-<title>Private Emotional Healing | Michelle Ronida</title>
-<style>
-:root{--cream:#f8f4eb;--green:#405b4b;--sage:#dce4d5;--ink:#292f29;--terra:#b96f55;--muted:#73766d;--white:#fffdf8;--line:#e6dfd2}
-*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
-header{border-bottom:1px solid var(--line);padding:22px 0}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-family:Georgia,serif;font-weight:700;font-size:1.35rem;color:var(--green)}.brand small{display:block;font:700 .65rem Arial;letter-spacing:2px;color:var(--muted);margin-top:4px}.btn{display:inline-block;background:var(--green);color:white;padding:14px 22px;border-radius:8px;font-weight:700}.btn-outline{background:transparent;color:var(--green);border:1px solid var(--green)}.hero{padding:58px 0 38px}.eyebrow{color:var(--terra);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:.82rem}h1,h2{font-family:Georgia,serif;line-height:1.12}h1{font-size:clamp(2.3rem,5vw,4rem);margin:12px 0 18px}h2{font-size:clamp(1.8rem,3vw,2.5rem)}.lead{font-size:1.12rem;max-width:760px}.section{padding:34px 0}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:24px}.testimonials{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}.testimonials img{width:100%;height:auto;display:block;border-radius:12px;border:8px solid white;box-shadow:0 8px 24px #33251b12}.cta{background:var(--sage);border-radius:18px;padding:30px;text-align:center;margin:28px 0 50px}.muted{color:var(--muted)}ul{padding-left:22px}footer{border-top:1px solid var(--line);padding:22px 0;color:var(--muted);font-size:.9rem}
-@media(max-width:700px){.nav{align-items:flex-start;flex-direction:column}.cards,.testimonials{grid-template-columns:1fr}.hero{padding-top:38px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Private Emotional Healing bersama Michelle Ronida. Ruang pendampingan untuk memahami emosi, merawat luka batin, dan menemukan ketenangan diri.">
+  <title>Private Therapy | Michelle Ronida</title>
+
+  <style>
+    :root {
+      --cream: #f8f4eb;
+      --green: #405b4b;
+      --sage: #dce4d5;
+      --ink: #292f29;
+      --terra: #b96f55;
+      --muted: #73766d;
+      --white: #fffdf8;
+      --line: #e6dfd2;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    header {
+      background: rgba(248, 244, 235, 0.96);
+      border-bottom: 1px solid var(--line);
+      padding: 18px 0;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-family: Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--green);
+      line-height: 1.2;
+    }
+
+    .brand small {
+      display: block;
+      font-family: Arial, sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+      font-weight: 400;
+      color: var(--muted);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--green);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      border: 1px solid var(--green);
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #304638;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--green);
+    }
+
+    .btn-outline:hover {
+      color: white;
+    }
+
+    .hero {
+      padding: 76px 0 62px;
+      text-align: center;
+      background: var(--cream);
+    }
+
+    .eyebrow {
+      color: var(--terra);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    h1, h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      max-width: 850px;
+      margin: 0 auto 22px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      margin: 0 0 16px;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 0 auto 26px;
+      color: #555b53;
+      font-size: 1.05rem;
+    }
+
+    .section {
+      padding: 70px 0;
+    }
+
+    .section-sage {
+      background: #eef0e8;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 38px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 26px;
+      box-shadow: 0 8px 24px rgba(41, 47, 41, 0.04);
+    }
+
+    .card p {
+      color: #5f645c;
+      margin-bottom: 0;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .copy p {
+      color: #5f645c;
+    }
+
+    .list {
+      padding-left: 20px;
+      color: #555b53;
+    }
+
+    .list li {
+      margin-bottom: 10px;
+    }
+
+    .note {
+      margin-top: 22px;
+      padding: 16px 20px;
+      border-left: 3px solid var(--terra);
+      background: rgba(255, 253, 248, 0.7);
+      color: #666b62;
+      font-size: 0.92rem;
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .testimonial-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .cta-box {
+      background: var(--green);
+      color: white;
+      border-radius: 18px;
+      padding: 42px;
+      text-align: center;
+    }
+
+    .cta-box h2 {
+      color: white;
+    }
+
+    .cta-box p {
+      color: #e6ece5;
+      max-width: 700px;
+      margin: 0 auto 24px;
+    }
+
+    .cta-box .btn {
+      background: var(--white);
+      color: var(--green);
+      border-color: var(--white);
+    }
+
+    .cta-box .btn:hover {
+      background: var(--sage);
+    }
+
+    footer {
+      padding: 28px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero {
+        padding: 54px 0 44px;
+      }
+
+      .section {
+        padding: 52px 0;
+      }
+
+      .cards,
+      .two-column,
+      .testimonials {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 22px;
+      }
+
+      .cta-box {
+        padding: 30px 22px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header><div class="wrap nav"><a class="brand" href="index.html">Michelle Ronida<small>EMOTIONAL HEALING · SPIRITUAL & FITRAH</small></a><a class="btn btn-outline" href="index.html#layanan">← Kembali ke website</a></div></header>
-<main>
-<section class="hero"><div class="wrap">
-<div class="eyebrow">Private Therapy</div>
-<h1>Private Emotional Healing<br>Berbasis Fitrah</h1>
-<p class="lead">Private Therapy bersama Bunda Michelle adalah sesi pendampingan personal untuk membantu Anda memahami emosi, memulihkan luka batin, dan menemukan kembali ketenangan dalam diri.</p>
-<p class="lead">Pendekatan yang digunakan menggabungkan emotional healing, kesadaran diri, serta aspek spiritual dan holistik. Proses pendampingan disesuaikan dengan kebutuhan dan kesiapan setiap individu.</p>
-</div></section>
-<section class="section"><div class="wrap">
-<h2>Apa yang Bisa Dibantu?</h2>
-<div class="cards">
-<div class="card"><ul><li>Luka batin masa lalu dan pengalaman emosional</li><li>Trauma emosional dan emosi yang sulit dikelola</li><li>Relasi dengan pasangan, anak, atau orang tua</li></ul></div>
-<div class="card"><ul><li>Kehilangan arah atau kesulitan memahami diri</li><li>Kelelahan emosional</li><li>Keinginan membangun hubungan yang lebih sehat dengan diri dan orang terdekat</li></ul></div>
-</div>
-<p class="muted">Sesi merupakan pendampingan emosional dan bukan pengganti layanan medis atau psikologis yang dibutuhkan.</p>
-</div></section>
-<section class="section"><div class="wrap">
-<h2>Testimoni Private Terapi</h2>
-<p>Beberapa pengalaman peserta setelah mengikuti pendampingan bersama Bunda Michelle.</p>
-<div class="testimonials"><img src="5 a.jpg" alt="Testimoni private terapi 1"><img src="5 b.jpg" alt="Testimoni private terapi 2"></div>
-</div></section>
-<div class="wrap"><section class="cta"><h2>Ingin bertanya atau membuat jadwal?</h2><p>Silakan hubungi admin untuk konsultasi awal dan informasi jadwal sesi.</p><a class="btn" href="https://wa.me/6282115680975?text=Assalamu%E2%80%99alaikum%2C%20Bunda%20Michelle.%20Saya%20ingin%20bertanya%20tentang%20layanan%20Private%20Emotional%20Healing%20dan%20jadwal%20sesi." target="_blank" rel="noopener">Konsultasi & Tanyakan Jadwal</a></section></div>
-</main>
-<footer><div class="wrap">© Michelle Ronida · Private Emotional Healing</div></footer>
-</body></html>
+
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html">
+        Michelle Ronida
+        <small>EMOTIONAL HEALING · SPIRITUAL & FITRAH</small>
+      </a>
+
+      <a class="btn btn-outline" href="index.html#layanan">
+        ← Kembali ke website
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">Private Therapy</div>
+        <h1>Ruang Aman untuk Pulih dan Memahami Diri</h1>
+        <p class="lead">
+          Setiap luka memiliki cerita. Melalui pendampingan emotional healing
+          berbasis spiritual dan fitrah, Bunda Michelle menemani Anda memahami
+          emosi, merawat luka batin, dan menemukan kembali ketenangan dalam diri.
+        </p>
+        <a class="btn" href="#konsultasi">Konsultasi Sekarang</a>
+      </div>
+    </section>
+
+    <!-- PENJELASAN -->
+    <section class="section section-sage">
+      <div class="wrap two-column">
+        <div class="copy">
+          <div class="eyebrow">Tentang Pendampingan</div>
+          <h2>Anda tidak harus memahami semuanya sendirian.</h2>
+          <p>
+            Private Therapy merupakan sesi pendampingan personal bersama
+            Michelle Ronida untuk membantu Anda mengenali pola emosi,
+            memahami pengalaman yang membekas, dan menemukan langkah pemulihan
+            yang sesuai dengan kebutuhan diri.
+          </p>
+          <p>
+            Proses dilakukan dengan pendekatan emotional healing, kesadaran
+            diri, serta aspek spiritual dan fitrah. Setiap sesi disesuaikan
+            dengan kesiapan dan cerita masing-masing individu.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Ruang ini dapat membantu Anda untuk:</h3>
+          <ul class="list">
+            <li>Memahami emosi yang terasa sulit dikelola.</li>
+            <li>Merawat luka batin dan pengalaman masa lalu.</li>
+            <li>Menemukan pola yang berulang dalam relasi.</li>
+            <li>Membangun hubungan yang lebih sehat dengan diri dan keluarga.</li>
+            <li>Menemukan kembali rasa tenang dan arah dalam hidup.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIAPA YANG BISA DIBANTU -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="eyebrow">Apakah Ini untuk Anda?</div>
+          <h2>Ketika hati terasa lelah, Anda boleh mencari ruang untuk pulih.</h2>
+          <p>
+            Pendampingan ini bisa menjadi ruang untuk bercerita dan memahami
+            diri, terutama ketika Anda sedang menghadapi:
+          </p>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Luka dan pengalaman masa lalu</h3>
+            <p>
+              Pengalaman yang masih membekas, rasa tidak berharga,
+              atau emosi yang muncul kembali dalam kehidupan sehari-hari.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Relasi dan keluarga</h3>
+            <p>
+              Kesulitan memahami diri dalam hubungan dengan pasangan,
+              anak, orang tua, atau orang-orang terdekat.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Kelelahan emosional</h3>
+            <p>
+              Merasa penuh, mudah tersentuh, kehilangan arah,
+              atau ingin kembali mengenali kebutuhan diri.
+            </p>
+          </div>
+        </div>
+
+        <div class="note">
+          Private Therapy merupakan pendampingan emosional dan spiritual,
+          bukan pengganti layanan medis atau psikologis. Jika Anda sedang
+          mengalami kondisi yang membutuhkan penanganan klinis, tetap
+          konsultasikan dengan tenaga profesional yang sesuai.
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONI -->
+    <section class="section section-sage">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="eyebrow">Cerita dari Mereka</div>
+          <h2>Testimoni Private Therapy</h2>
+          <p>
+            Beberapa pengalaman peserta setelah mengikuti pendampingan
+            bersama Bunda Michelle.
+          </p>
+        </div>
+
+        <div class="testimonials">
+          <img
+            class="testimonial-image"
+            src="5 a.png"
+            alt="Testimoni peserta Private Therapy"
+            loading="lazy"
+          >
+
+          <img
+            class="testimonial-image"
+            src="5 b.png"
+            alt="Testimoni peserta Private Therapy"
+            loading="lazy"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" id="konsultasi">
+      <div class="wrap">
+        <div class="cta-box">
+          <div class="eyebrow" style="color:#f0c3ad;">Langkah Pertama</div>
+          <h2>Ingin mulai memahami diri dan merawat luka batin?</h2>
+          <p>
+            Anda bisa menghubungi tim Michelle untuk bertanya tentang layanan,
+            jadwal, dan proses Private Therapy. Tidak perlu menyiapkan cerita
+            yang sempurna—mulailah dari hal yang ingin Anda tanyakan.
+          </p>
+          <a
+            class="btn"
+            href="https://wa.me/6282115680975?text=Assalamualaikum%20Bunda%20Michelle%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20Private%20Therapy%20dan%20jadwal%20konsultasi."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Konsultasi via WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © Michelle Ronida · Private Emotional Healing
+    </div>
+  </footer>
+
+</body>
+</html>
