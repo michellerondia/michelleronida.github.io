@@ -1,569 +1,700 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Menjadi Rumah yang Dirindu | Michelle Ronida</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Buku Menjadi Rumah yang Dirindu karya Michelle Ronida. Sebuah perjalanan pulang ke dalam diri dan membangun rumah yang hangat bagi keluarga.">
+  <title>Menjadi Rumah yang Dirindu | Michelle Ronida</title>
 
-<style>
-:root {
-  --cream: #fbf7ef;
-  --navy: #193d63;
-  --blue: #214f83;
-  --terra: #c96f52;
-  --gold: #e2bd62;
-  --sage: #e6ebe2;
-}
+  <style>
+    :root {
+      --navy: #214f83;
+      --navy-dark: #17395f;
+      --blue-soft: #eaf2f9;
+      --blue-pale: #f5f8fc;
+      --cream: #faf7f0;
+      --gold: #c9a85b;
+      --coral: #c96e51;
+      --green: #405b4b;
+      --ink: #28312d;
+      --muted: #68747d;
+      --white: #ffffff;
+    }
 
-* { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
-body {
-  margin: 0;
-  background: var(--cream);
-  color: #34404a;
-  font-family: Arial, sans-serif;
-  line-height: 1.7;
-}
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
 
-.wrap {
-  width: min(1100px, 90%);
-  margin: auto;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-/* HERO */
-.hero {
-  min-height: 650px;
-  display: grid;
-  grid-template-columns: 1.05fr .95fr;
-  gap: 45px;
-  align-items: center;
-  padding: 65px 0;
-  position: relative;
-  overflow: hidden;
-}
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-.hero-copy .eyebrow {
-  color: var(--terra);
-  font-size: 11px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin: 0 0 14px;
-}
+    .wrap {
+      width: min(1120px, 90%);
+      margin: 0 auto;
+    }
 
-.hero h1 {
-  color: var(--navy);
-  font: normal clamp(42px, 5vw, 68px)/1.08 Georgia, serif;
-  margin: 0 0 24px;
-}
+    /* NAVIGATION */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(250, 247, 240, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #e7e0d5;
+    }
 
-.hero p {
-  font-size: 15px;
-  margin: 0 0 17px;
-  color: #4f5c65;
-}
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
 
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 26px;
-}
+    .brand {
+      color: var(--green);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 1.1;
+    }
 
-.btn {
-  display: inline-block;
-  padding: 12px 19px;
-  background: var(--terra);
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: bold;
-  border: 1px solid var(--terra);
-}
+    .brand small {
+      display: block;
+      margin-top: 5px;
+      color: #7c827c;
+      font-family: Arial, sans-serif;
+      font-size: 9px;
+      letter-spacing: 2px;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
 
-.btn:hover { background: #ad573d; }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 13px;
+    }
 
-.btn.secondary {
-  color: var(--navy);
-  background: transparent;
-  border-color: var(--navy);
-}
+    nav a:hover {
+      color: var(--coral);
+    }
 
-.hero-visual {
-  min-height: 470px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
+    .nav-cta {
+      background: var(--green);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
 
-.michelle-photo {
-  width: min(90%, 400px);
-  height: 440px;
-  object-fit: contain;
-  object-position: center bottom;
-  position: relative;
-  z-index: 1;
-}
+    /* BUTTONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--coral);
+      color: white;
+      padding: 14px 23px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: bold;
+      transition: 0.2s ease;
+      box-shadow: 0 7px 18px rgba(201, 110, 81, 0.18);
+    }
 
-.photo-fallback {
-  display: none;
-  width: min(90%, 400px);
-  height: 400px;
-  background: #f3eee5;
-  border: 1px solid #e5ddd0;
-  border-radius: 4px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #8b8175;
-  padding: 25px;
-}
+    .btn:hover {
+      background: #b85d42;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(201, 110, 81, 0.25);
+    }
 
-.hero-visual::before {
-  content: "";
-  position: absolute;
-  width: 390px;
-  height: 390px;
-  border: 1px solid rgba(201,168,91,.5);
-  border-radius: 50%;
-  background: #edf3f7;
-}
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 22px;
+      border: 1px solid var(--navy);
+      border-radius: 6px;
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
 
-/* BOOK COVER */
-.book-section {
-  background: #edf3f7;
-  padding: 55px 0;
-  overflow: hidden;
-}
+    .btn-outline:hover {
+      background: var(--navy);
+      color: white;
+    }
 
-.book-layout {
-  display: grid;
-  grid-template-columns: .8fr 1.2fr;
-  gap: 55px;
-  align-items: center;
-}
+    /* HERO */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 76px 0 86px;
+      background:
+        radial-gradient(circle at 12% 12%, rgba(201, 168, 91, 0.14), transparent 28%),
+        radial-gradient(circle at 88% 75%, rgba(33, 79, 131, 0.12), transparent 30%),
+        linear-gradient(135deg, #f8f7f2 0%, #edf4fa 55%, #f9f7f0 100%);
+    }
 
-.book-mockup {
-  min-height: 390px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  perspective: 1000px;
-}
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 560px;
+      height: 560px;
+      border: 1px solid rgba(33, 79, 131, 0.10);
+      border-radius: 50%;
+      top: -260px;
+      right: -140px;
+    }
 
-.book-cover {
-  width: min(75%, 280px);
-  max-height: 390px;
-  object-fit: contain;
-  transform: rotate(-5deg);
-  filter: drop-shadow(0 20px 20px rgba(20,45,70,.25));
-  transition: transform .3s ease;
-}
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(201, 168, 91, 0.18);
+      border-radius: 50%;
+      bottom: -260px;
+      left: -130px;
+    }
 
-.book-cover:hover {
-  transform: rotate(-2deg) translateY(-5px);
-}
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 58px;
+    }
 
-.cover-fallback {
-  display: none;
-  width: 245px;
-  height: 340px;
-  background: #dce7f0;
-  border: 1px dashed #9bb0c3;
-  color: #536b80;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 25px;
-  transform: rotate(-5deg);
-  box-shadow: 0 20px 25px rgba(20,45,70,.15);
-}
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--coral);
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
 
-.book-copy h2 {
-  font: normal clamp(28px, 3vw, 42px)/1.2 Georgia, serif;
-  color: var(--navy);
-  margin: 0 0 18px;
-}
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: normal;
+      line-height: 1.15;
+    }
 
-.book-copy p {
-  color: #4f5c65;
-  font-size: 15px;
-  margin: 0 0 16px;
-}
+    .hero h1 {
+      max-width: 620px;
+      margin: 0 0 20px;
+      color: var(--navy-dark);
+      font-size: clamp(42px, 5.2vw, 68px);
+      letter-spacing: -1.5px;
+    }
 
-/* GALLERY */
-.gallery {
-  padding: 55px 0;
-  background: #edf3f7;
-}
+    .hero-subtitle {
+      max-width: 540px;
+      margin: 0 0 28px;
+      color: #536575;
+      font-size: 16px;
+    }
 
-.gallery.testimonials {
-  background: var(--cream);
-}
+    .hero-note {
+      margin-top: 18px;
+      color: #78818a;
+      font-size: 12px;
+    }
 
-.section-heading {
-  text-align: center;
-  margin: 0 auto 30px;
-  max-width: 700px;
-}
+    .hero-visual {
+      position: relative;
+      min-height: 490px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.section-heading .eyebrow {
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: var(--blue);
-  font-weight: bold;
-  margin: 0 0 8px;
-}
+    .visual-shape {
+      position: absolute;
+      width: 100%;
+      height: 88%;
+      border-radius: 48% 52% 42% 58% / 55% 42% 58% 45%;
+      background: linear-gradient(145deg, #dce9f4, #f7f9fc);
+      transform: rotate(-7deg);
+    }
 
-.section-heading h2 {
-  font: normal clamp(30px, 3vw, 42px)/1.2 Georgia, serif;
-  color: var(--navy);
-  margin: 0 0 10px;
-}
+    .gold-ring {
+      position: absolute;
+      width: 88%;
+      height: 80%;
+      border: 1px solid rgba(201, 168, 91, 0.65);
+      border-radius: 50%;
+      transform: rotate(12deg);
+    }
 
-.section-heading p {
-  font-size: 13px;
-  color: #65727b;
-  margin: 0;
-}
+    .book-frame {
+      position: relative;
+      z-index: 2;
+      width: min(330px, 72%);
+      padding: 18px;
+      background: linear-gradient(145deg, #315b87, #17395f);
+      border-radius: 8px;
+      box-shadow: 0 25px 55px rgba(20, 47, 76, 0.25);
+      transform: rotate(-5deg);
+    }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 940px;
-  margin: auto;
-}
+    .book-frame img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: contain;
+      border-radius: 3px;
+    }
 
-.gallery-card {
-  margin: 0;
-  background: white;
-  border: 1px solid #dce3e8;
-  border-radius: 6px;
-  padding: 10px;
-  box-shadow: 0 5px 14px rgba(25,45,65,.06);
-}
+    /* QUOTE STRIP */
+    .quote-strip {
+      position: relative;
+      overflow: hidden;
+      padding: 52px 0;
+      background: var(--navy-dark);
+      color: white;
+      text-align: center;
+    }
 
-.photo-placeholder {
-  min-height: 170px;
-  background: #f3f6f8;
-  border: 1px dashed #b8c8d5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 15px;
-  color: #7a8994;
-  font-size: 12px;
-}
+    .quote-strip::before,
+    .quote-strip::after {
+      content: "";
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 50%;
+    }
 
-.gallery-card figcaption {
-  font-size: 11px;
-  color: #68747d;
-  padding: 8px 2px 2px;
-}
+    .quote-strip::before {
+      top: -150px;
+      left: -70px;
+    }
 
-/* QUOTE */
-.quote-band {
-  background: var(--navy);
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-  position: relative;
-  overflow: hidden;
-}
+    .quote-strip::after {
+      right: -70px;
+      bottom: -170px;
+    }
 
-.quote-band::before,
-.quote-band::after {
-  content: "";
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 50%;
-}
+    .quote-strip p {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      font-family: Georgia, serif;
+      font-size: clamp(23px, 3vw, 34px);
+      line-height: 1.45;
+    }
 
-.quote-band::before {
-  left: -65px;
-  top: -80px;
-}
+    .quote-strip span {
+      display: block;
+      margin-top: 16px;
+      color: #e2c77f;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
 
-.quote-band::after {
-  right: -65px;
-  bottom: -80px;
-}
+    /* GALLERY */
+    .section {
+      padding: 82px 0;
+    }
 
-.quote-text {
-  max-width: 800px;
-  margin: 0 auto 14px;
-  font: normal clamp(22px, 2.5vw, 30px)/1.35 Georgia, serif;
-  color: white;
-}
+    .section.soft {
+      background: #edf2f6;
+    }
 
-.quote-label {
-  margin: 0;
-  color: var(--gold);
-  font-size: 10px;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-}
+    .section-head {
+      max-width: 720px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
 
-/* CTA */
-.cta {
-  padding: 45px 0;
-  text-align: center;
-  background: linear-gradient(120deg, #edf3f7, #f8f4eb);
-}
+    .section-head h2 {
+      margin: 0 0 14px;
+      color: var(--navy-dark);
+      font-size: clamp(32px, 4vw, 46px);
+    }
 
-.cta h2 {
-  color: var(--navy);
-  font: normal clamp(28px, 3vw, 38px)/1.2 Georgia, serif;
-  margin: 0 0 18px;
-}
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
 
-footer {
-  padding: 18px 0;
-  text-align: center;
-  font-size: 11px;
-  color: #7a817f;
-  border-top: 1px solid #e6ded2;
-}
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
 
-/* MOBILE */
-@media (max-width: 760px) {
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 40px 0;
-  }
+    .gallery-card {
+      min-height: 240px;
+      padding: 12px;
+      background: white;
+      border: 1px solid #dce4eb;
+      border-radius: 10px;
+      box-shadow: 0 10px 24px rgba(36, 58, 80, 0.06);
+    }
 
-  .hero-visual {
-    min-height: 330px;
-    order: -1;
-  }
+    .gallery-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
 
-  .hero-visual::before {
-    width: 290px;
-    height: 290px;
-  }
+    .gallery-placeholder {
+      min-height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      border: 1px dashed #b7c5d2;
+      border-radius: 6px;
+      color: #778695;
+      background: #f6f8fa;
+      text-align: center;
+      font-size: 13px;
+    }
 
-  .michelle-photo {
-    height: 330px;
-    width: min(85%, 320px);
-  }
+    .gallery-card figcaption {
+      padding: 12px 4px 3px;
+      color: #5d6872;
+      font-size: 13px;
+    }
 
-  .book-layout {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
+    /* TESTIMONIALS */
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
 
-  .book-mockup {
-    min-height: 330px;
-  }
+    .testimonial-card {
+      padding: 26px;
+      background: white;
+      border: 1px solid #e4e8eb;
+      border-radius: 12px;
+      box-shadow: 0 12px 28px rgba(36, 58, 80, 0.05);
+    }
 
-  .book-cover {
-    max-height: 330px;
-  }
+    .testimonial-card img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: contain;
+      border-radius: 6px;
+      background: #f4f6f8;
+    }
 
-  .book-copy {
-    text-align: center;
-  }
+    .testimonial-card p {
+      margin: 14px 0 0;
+      color: #64717b;
+      font-size: 13px;
+    }
 
-  .gallery-grid {
-    grid-template-columns: 1fr;
-    max-width: 420px;
-  }
+    /* CTA */
+    .final-cta {
+      padding: 76px 0;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(201, 168, 91, 0.16), transparent 28%),
+        linear-gradient(135deg, #eaf2f9, #f8f7f2);
+      text-align: center;
+    }
 
-  .photo-placeholder {
-    min-height: 210px;
-  }
+    .final-cta h2 {
+      max-width: 700px;
+      margin: 0 auto 18px;
+      color: var(--navy-dark);
+      font-size: clamp(32px, 4vw, 46px);
+    }
 
-  .buttons {
-    flex-direction: column;
-  }
+    .final-cta p {
+      max-width: 620px;
+      margin: 0 auto 26px;
+      color: #5d6b77;
+      font-size: 15px;
+    }
 
-  .btn {
-    text-align: center;
-  }
-}
-</style>
+    footer {
+      padding: 24px 0;
+      background: #f5f1e9;
+      border-top: 1px solid #e5ded2;
+      color: #7b817c;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 850px) {
+      .nav {
+        padding: 14px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      nav {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 12px 16px;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .hero {
+        padding: 55px 0 65px;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .hero-visual {
+        min-height: 420px;
+      }
+
+      .book-frame {
+        width: min(280px, 72%);
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .wrap {
+        width: 90%;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero-visual {
+        min-height: 360px;
+      }
+
+      .book-frame {
+        width: 230px;
+      }
+
+      .section {
+        padding: 58px 0;
+      }
+
+      .gallery,
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-card img {
+        height: auto;
+        max-height: 420px;
+        object-fit: contain;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<header class="wrap hero">
-  <div class="hero-copy">
-    <p class="eyebrow">Buku karya Michelle Ronida</p>
-    <h1>Menjadi Rumah<br>yang Dirindu</h1>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html">
+        Michelle Ronida
+        <small>Emotional Healing · Spiritual & Fitrah</small>
+      </a>
 
-    <p>
-      Melalui buku <em>Menjadi Rumah yang Dirindu</em>, pembaca diajak
-      menelusuri perjalanan pulang ke dalam diri—tempat rasa bermula
-      dan luka tersimpan.
-    </p>
+      <nav aria-label="Navigasi utama">
+        <a href="index.html#profil">Profil</a>
+        <a href="index.html#layanan">Layanan</a>
+        <a href="buku.html">Buku</a>
+        <a href="ebook.html">E-book</a>
+        <a href="index.html#kelas">E-course</a>
+        <a href="undang-michelle.html">Undang Michelle</a>
+      </nav>
 
-    <p>
-      Buku ini menjadi teman perjalanan untuk memahami diri,
-      menerima masa lalu, dan membangun rumah yang hangat bagi keluarga.
-    </p>
-
-    <p>
-      Temukan refleksi dan pemahaman baru tentang diri, relasi,
-      serta makna menjadi rumah bagi orang-orang yang kita cintai.
-    </p>
-
-    <div class="buttons">
-      <a class="btn" id="order-top" href="#">Pesan Buku MRYD</a>
-      <a class="btn secondary" href="index.html">Kembali ke Michelle</a>
+      <a class="nav-cta" href="index.html#kontak">Hubungi</a>
     </div>
-  </div>
+  </header>
 
-  <div class="hero-visual">
-   <img
-  class="michelle-photo"
-  src="./cover-mryd.jpg"
-  alt="Sampul buku Menjadi Rumah yang Dirindu"
-  onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+  <main>
 
-    <div class="photo-fallback">
-      Foto Michelle<br>
-      Pastikan file <strong>michelle a.png.png</strong> ada di folder yang sama.
-    </div>
-  </div>
-</header>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div>
+          <p class="eyebrow">Buku karya Michelle Ronida</p>
+          <h1>Menjadi Rumah yang Dirindu</h1>
+          <p class="hero-subtitle">
+            Perjalanan pulang bukan hanya pada tempat, tetapi juga ke dalam diri sendiri.
+            Sebuah teman perjalanan untuk memahami luka, menerima masa lalu,
+            dan menemukan kembali kehangatan rumah.
+          </p>
 
-<!-- BOOK COVER -->
-<section class="book-section">
-  <div class="wrap book-layout">
-    <div class="book-mockup">
-      <img
-        class="book-cover"
-        src="./kover_cetak.jpg"
-        alt="Sampul buku Menjadi Rumah yang Dirindu"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <a
+            class="btn wa-link"
+            data-message="Halo, saya ingin bertanya tentang buku Menjadi Rumah yang Dirindu, harga dan cara pemesanan."
+            href="#"
+          >Pesan Buku MRYD</a>
 
-      <div class="cover-fallback">
-        Sampul buku MRYD<br>
-        Tambahkan file <strong>kover_cetak.jpg</strong>
+          <p class="hero-note">
+            Buku karya Michelle Ronida · PPA Institute
+          </p>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-shape"></div>
+          <div class="gold-ring"></div>
+
+          <div class="book-frame">
+            <img src="cover-mryd.jpg" alt="Cover buku Menjadi Rumah yang Dirindu karya Michelle Ronida">
+          </div>
+        </div>
       </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="quote-strip">
+      <div class="wrap">
+        <p>
+          “Ketika pernah kehilangan tempat untuk kembali,
+          maka jadilah rumah yang dinanti.”
+        </p>
+        <span>Menjadi Rumah yang Dirindu</span>
+      </div>
+    </section>
+
+    <!-- LAUNCHING GALLERY -->
+    <section class="section soft" id="launching">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Momen peluncuran</p>
+          <h2>Dokumentasi Launching</h2>
+          <p>
+            Momen-momen perjalanan buku Menjadi Rumah yang Dirindu
+            bertemu dengan para pembacanya.
+          </p>
+        </div>
+
+        <div class="gallery">
+          <figure class="gallery-card">
+            <div class="gallery-placeholder">Foto launching 1</div>
+            <figcaption>Grand Launching MRYD</figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <div class="gallery-placeholder">Foto launching 2</div>
+            <figcaption>Peluncuran dan kegiatan</figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <div class="gallery-placeholder">Foto launching 3</div>
+            <figcaption>Momen bersama pembaca</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section" id="testimoni">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Cerita pembaca</p>
+          <h2>Testimoni</h2>
+          <p>
+            Cerita dan pengalaman pembaca setelah berjumpa dengan
+            buku Menjadi Rumah yang Dirindu.
+          </p>
+        </div>
+
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="gallery-placeholder">Foto testimoni 1</div>
+            <p>Testimoni pembaca</p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="gallery-placeholder">Foto testimoni 2</div>
+            <p>Testimoni pembaca</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="wrap">
+        <p class="eyebrow">Mulai perjalanan pulang</p>
+        <h2>Jadikan buku ini teman perjalananmu</h2>
+        <p>
+          Untuk memahami diri, merawat hubungan, dan membangun rumah
+          yang hangat bagi keluarga.
+        </p>
+
+        <a
+          class="btn wa-link"
+          data-message="Halo, saya ingin memesan buku Menjadi Rumah yang Dirindu. Mohon info harga dan cara pemesanannya."
+          href="#"
+        >Pesan Buku MRYD</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © <span class="year"></span> Michelle Ronida · Menjadi Rumah yang Dirindu
     </div>
+  </footer>
 
-    <div class="book-copy">
-      <h2>Sebuah perjalanan pulang ke dalam diri</h2>
+  <script>
+    const WA_NUMBER = "6282115680975";
 
-      <p>
-        Menjadi Rumah yang Dirindu mengajak pembaca memahami diri,
-        menelusuri pengalaman yang membentuk kita, dan menemukan
-        makna rumah dalam hubungan yang kita jalani.
-      </p>
+    document.querySelectorAll(".year").forEach(function (el) {
+      el.textContent = new Date().getFullYear();
+    });
 
-      <p>
-        Sebuah teman perjalanan untuk merawat diri dan membangun
-        kehangatan bersama orang-orang yang dicintai.
-      </p>
-    </div>
-  </div>
-</section>
+    document.querySelectorAll(".wa-link").forEach(function (link) {
+      const message = link.dataset.message ||
+        "Halo, saya ingin bertanya tentang buku Menjadi Rumah yang Dirindu.";
 
-<!-- DOKUMENTASI LAUNCHING -->
-<section class="gallery" id="dokumentasi">
-  <div class="wrap">
-    <div class="section-heading">
-      <p class="eyebrow">Momen berkesan</p>
-      <h2>Dokumentasi Launching</h2>
-      <p>Perjalanan buku Menjadi Rumah yang Dirindu bertemu para pembaca.</p>
-    </div>
+      link.href = "https://wa.me/" + WA_NUMBER +
+        "?text=" + encodeURIComponent(message);
 
-    <div class="gallery-grid">
-      <figure class="gallery-card">
-        <div class="photo-placeholder">Foto launching 1<br>akan ditambahkan</div>
-        <figcaption>Grand launching MRYD</figcaption>
-      </figure>
-
-      <figure class="gallery-card">
-        <div class="photo-placeholder">Foto launching 2<br>akan ditambahkan</div>
-        <figcaption>Momen bersama pembaca</figcaption>
-      </figure>
-
-      <figure class="gallery-card">
-        <div class="photo-placeholder">Foto launching 3<br>akan ditambahkan</div>
-        <figcaption>Perjalanan peluncuran buku</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONI -->
-<section class="gallery testimonials" id="testimoni">
-  <div class="wrap">
-    <div class="section-heading">
-      <p class="eyebrow">Cerita pembaca</p>
-      <h2>Testimoni</h2>
-      <p>Catatan dan pengalaman pembaca setelah bertemu dengan buku Menjadi Rumah yang Dirindu.</p>
-    </div>
-
-    <div class="gallery-grid">
-      <figure class="gallery-card">
-        <div class="photo-placeholder">Foto testimoni 1<br>akan ditambahkan</div>
-        <figcaption>Testimoni pembaca</figcaption>
-      </figure>
-
-      <figure class="gallery-card">
-        <div class="photo-placeholder">Foto testimoni 2<br>akan ditambahkan</div>
-        <figcaption>Testimoni pembaca</figcaption>
-      </figure>
-
-      <figure class="gallery-card">
-        <div class="photo-placeholder">Foto testimoni 3<br>akan ditambahkan</div>
-        <figcaption>Testimoni pembaca</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- QUOTE: TEKS SESUAI YANG PAK YOGA BERIKAN -->
-<section class="quote-band">
-  <p class="quote-text">
-    “Ketika pernah kehilangan tempat untuk kembali,<br>
-    maka jadilah rumah yang dinanti.”
-  </p>
-  <p class="quote-label">MENJADI RUMAH YANG DIRINDU</p>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-  <div class="wrap">
-    <h2>Jadikan buku ini teman perjalananmu</h2>
-    <a class="btn" id="order-bottom" href="#">Pesan Buku MRYD</a>
-  </div>
-</section>
-
-<footer>
-  © <span id="year"></span> Michelle Ronida
-</footer>
-
-<script>
-const whatsappNumber = "6282115680975";
-const message =
-  "Halo, saya ingin memesan buku Menjadi Rumah yang Dirindu. Mohon info harga dan cara pemesanannya.";
-
-const whatsappLink =
-  "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
-
-["order-top", "order-bottom"].forEach(function(id) {
-  const button = document.getElementById(id);
-  button.href = whatsappLink;
-  button.target = "_blank";
-  button.rel = "noopener";
-});
-
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+      link.target = "_blank";
+      link.rel = "noopener";
+    });
+  </script>
 
 </body>
 </html>
