@@ -424,11 +424,11 @@ footer {
   </div>
 
   <div class="hero-visual">
-    <img
-      class="michelle-photo"
-      src="./michelle a.png.png"
-      alt="Michelle Ronida"
-      onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+   <img
+  class="michelle-photo"
+  src="./cover-mryd.jpg"
+  alt="Sampul buku Menjadi Rumah yang Dirindu"
+  onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
 
     <div class="photo-fallback">
       Foto Michelle<br>
