@@ -37,6 +37,32 @@ footer{padding:24px 0;border-top:1px solid #e6e0d4;color:var(--muted);font-size:
   display: block;
   border-radius: 8px;
 }
+  .book-cover {
+  min-height: 330px;
+  background: var(--green);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  box-shadow: 0 12px 30px #3332;
+}
+
+.book-cover img {
+  width: 100%;
+  max-width: 360px;
+  height: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+  border-radius: 6px;
+}
+
+@media (max-width: 850px) {
+  .book-cover img {
+    max-height: 480px;
+  }
+}
 </style></head><body>
 <header><div class="wrap nav">
 <a class="brand" href="index.html">Michelle Ronida<small>Emotional Healing · Spiritual & Fitrah</small></a>
